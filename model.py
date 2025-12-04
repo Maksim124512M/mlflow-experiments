@@ -8,7 +8,7 @@ from sklearn.metrics import mean_absolute_error, root_mean_squared_error, r2_sco
 
 from catboost import CatBoostRegressor
 
-mlflow.set_tracking_uri("sqlite:///mlflow.db")
+mlflow.set_tracking_uri('http://127.0.0.1:8000')
 mlflow.set_experiment('First experiment')
 
 X = df_encoded.drop(columns=['deposit_yes', 'deposit_no'])
